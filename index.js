@@ -20,11 +20,11 @@ bot = new Discord.Client({
   ],
   ws: { large_threshold: 250, compress: false }
 });
-console.log(process.pid);
-bot.on(`ready`, () => {
-	console.log(`${bot.user.username} ready!`)
-	bot.user.setActivity(`Peery Music { type: "streaming", url: "https://www.twitch.tv/twitch" });
+
+bot.on('ready', () => {
+  console.log(`Logged in as ${bot.user.tag}!`);
 });
+
 process.on('unhandledRejection', console.error);
 bot.login(process.env.BOT_TOKEN);
 

@@ -26,7 +26,7 @@ bot.on(`ready`, () => {
 	bot.user.setActivity(`Peery Music { type: "streaming", url: "https://www.twitch.tv/twitch" });
 });
 process.on('unhandledRejection', console.error);
-bot.login(process.env.token ? process.env.token : require("./config.json").token);
+bot.login(process.env.BOT_TOKEN);
 
 var servers = {};
 
